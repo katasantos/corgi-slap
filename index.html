@@ -32,7 +32,8 @@
         });  
 
         $(document).on('keypress',function(e) {
-            if(e.which == 113) {
+            console.log(e.which);
+            if(e.which == 113 || e.which == 81) {
                 $(".corgi").attr("src", "assets\\images\\corgi\\slap1.png");
 
                 var sound = document.getElementById("slap");
@@ -42,7 +43,7 @@
                     $(".corgi").attr("src", "assets\\images\\corgi\\idle.png");
                 }, 2000); 
             }
-            else if(e.which == 119)
+            else if(e.which == 119 || e.which == 87)
             {
                 $(".corgi").attr("src", "assets\\images\\corgi\\fart1.png");
 
