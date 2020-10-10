@@ -16,41 +16,41 @@
     </style>
     <body>
         <div class="keys">
-            <img class="keys" src="C:\Users\Kata\Desktop\CorgiButt\assets\images\ui\qkey.png">
-            <img class="keys" src="C:\Users\Kata\Desktop\CorgiButt\assets\images\ui\wkey.png">
+            <img class="keys" src="assets\images\ui\qkey.png">
+            <img class="keys" src="assets\images\ui\wkey.png">
         </div>
         <div class="main">
             <img class="corgi">
         </div>
-        <audio id="slap" src="C:\Users\Kata\Desktop\CorgiButt\assets\sounds\slap1.wav" autoplay="false" ></audio>
-        <audio id="fart" src="C:\Users\Kata\Desktop\CorgiButt\assets\sounds\fart1.wav" autoplay="false" ></audio>
+        <audio id="slap" src="assets\sounds\slap1.wav" autoplay="false" ></audio>
+        <audio id="fart" src="assets\sounds\fart1.wav" autoplay="false" ></audio>
     </body>
 
     <script>
         $(document).ready(function(){
-            $(".corgi").attr("src", "C:/Users/Kata/Desktop/CorgiButt/assets/images/corgi/idle.png");
+            $(".corgi").attr("src", "/assets/images/corgi/idle.png");
         });  
 
         $(document).on('keypress',function(e) {
             if(e.which == 113) {
-                $(".corgi").attr("src", "C:/Users/Kata/Desktop/CorgiButt/assets/images/corgi/slap1.png");
+                $(".corgi").attr("src", "/assets/images/corgi/slap1.png");
 
                 var sound = document.getElementById("slap");
                  sound.play();
           
                 setInterval(function() {
-                    $(".corgi").attr("src", "C:/Users/Kata/Desktop/CorgiButt/assets/images/corgi/idle.png");
+                    $(".corgi").attr("src", "/assets/images/corgi/idle.png");
                 }, 2000); 
             }
             else if(e.which == 119)
             {
-                $(".corgi").attr("src", "C:/Users/Kata/Desktop/CorgiButt/assets/images/corgi/fart1.png");
+                $(".corgi").attr("src", "/assets/images/corgi/fart1.png");
 
                 var sound = document.getElementById("fart");
                  sound.play();
 
                 setInterval(function() {
-                    $(".corgi").attr("src", "C:/Users/Kata/Desktop/CorgiButt/assets/images/corgi/idle.png");
+                    $(".corgi").attr("src", "/assets/images/corgi/idle.png");
                 }, 2000); 
             }
         });
