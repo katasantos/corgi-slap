@@ -28,7 +28,7 @@
 
     <script>
         $(document).ready(function(){
-            $(".corgi").attr("src", "\\assets\\images\\corgi\\idle.png");
+            $(".corgi").attr("src", "assets\\images\\corgi\\idle.png");
         });  
 
         $(document).on('keypress',function(e) {
@@ -39,18 +39,18 @@
                  sound.play();
           
                 setInterval(function() {
-                    $(".corgi").attr("src", "\\assets\\images\\corgi\\idle.png");
+                    $(".corgi").attr("src", "assets\\images\\corgi\\idle.png");
                 }, 2000); 
             }
             else if(e.which == 119)
             {
-                $(".corgi").attr("src", "\\assets\\images\\corgi\\fart1.png");
+                $(".corgi").attr("src", "assets\\images\\corgi\\fart1.png");
 
                 var sound = document.getElementById("fart");
                  sound.play();
 
                 setInterval(function() {
-                    $(".corgi").attr("src", "\\assets\\images\\corgi\\idle.png");
+                    $(".corgi").attr("src", "assets\\images\\corgi\\idle.png");
                 }, 2000); 
             }
         });
