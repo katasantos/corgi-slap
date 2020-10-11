@@ -2,6 +2,8 @@
     <head>
         <title>Corgi Butt</title>
         <script src="js/jquery-3.5.1.min.js"></script>
+        <script src="js/jquery.mobile-1.5.0-rc1.js"></script>
+        <link rel="stylesheet" href="css/jquery.mobile-1.4.5.css">
     </head>
     <style>
         .corgi
@@ -15,6 +17,7 @@
         }
     </style>
     <body>
+        <div class="content">
         <div class="keys">
             <img class="keys" src="assets\images\ui\qkey.png">
             <img class="keys" src="assets\images\ui\wkey.png">
@@ -22,6 +25,7 @@
         <div class="main">
             <img class="corgi">
         </div>
+    </div>
         <audio id="slap" src="assets\sounds\slap1.wav" autoplay="false" ></audio>
         <audio id="fart" src="assets\sounds\fart1.wav" autoplay="false" ></audio>
     </body>
@@ -54,6 +58,28 @@
                     $(".corgi").attr("src", "assets\\images\\corgi\\idle.png");
                 }, 2000); 
             }
+        });
+
+        $(document).on("swipeleft", function(e){
+            $(".corgi").attr("src", "assets\\images\\corgi\\slap1.png");
+
+            var sound = document.getElementById("slap");
+            sound.play();
+
+            setInterval(function() {
+                $(".corgi").attr("src", "assets\\images\\corgi\\idle.png");
+            }, 2000); 
+        });
+
+        $(document).on("swiperight", function(e){
+            $(".corgi").attr("src", "assets\\images\\corgi\\fart1.png");
+
+                var sound = document.getElementById("fart");
+                 sound.play();
+
+                setInterval(function() {
+                    $(".corgi").attr("src", "assets\\images\\corgi\\idle.png");
+                }, 2000);
         });
 
     </script>
