@@ -1,8 +1,7 @@
 # corgi-slap
 
-Press Q for Slap
-Press W for Fart
+Press Q for Slap | Press W for Fart
 
-You can tap the buttons for mobile versions
+You can tap the buttons for mobile.
 
 Used lowLag.js for sounds
